@@ -15,6 +15,7 @@
 - Q: What layered architecture structure should be used? → A: Standard 4-layer (Presentation, Business, Data, Infrastructure) - Includes separate infrastructure layer for cross-cutting concerns
 - Q: How should external dependencies be isolated during unit testing? → A: Interface-based mocking (all dependencies) - Mock all infrastructure via interfaces for fast, isolated unit tests
 - Q: Which design patterns should be applied across the architecture? → A: Minimal (Factory, Repository only) - Only the patterns explicitly needed for library switching
+- Q: PDF library licensing approach given "free library only" requirement? → A: QuestPDF (Community License if company revenue <$1M, Professional License budget if >$1M) - Best balance of quality and cost
 
 ## User Scenarios & Testing *(mandatory)*
 
@@ -211,6 +212,7 @@ After PDF generation is complete, the system automatically transfers the generat
 - **Architecture**: System MUST follow a standard 4-layer architecture with clear separation of concerns: Presentation Layer (SQL triggers, CLR entry points), Business Logic Layer (core domain processing, workflow orchestration), Data Access Layer (Repository pattern for database operations), and Infrastructure Layer (PDF generation, email services, file I/O, external integrations)
 - **Design Patterns**: System MUST use Factory pattern for creating PDF generator and notification service instances, and Repository pattern for all database access operations; additional patterns should be applied only when clearly justified by specific requirements
 - **Testing Strategy**: All external dependencies (database, file system, PDF library, email service) MUST be abstracted behind interfaces to enable complete test isolation through mocking, supporting the 95%+ unit test coverage requirement
+- **PDF Library Licensing**: QuestPDF will be used for PDF generation; Community License (free for companies with <$1M annual revenue) is expected to apply, with Professional License ($1,299/year) budgeted if company revenue exceeds threshold
 - **Business Hours**: System operates 24/7 but peak usage and critical SLA requirements apply during business hours (8 AM - 6 PM Monday-Friday)
 - **Retention Policy**: Generated PDFs are retained indefinitely at the destination location; no automatic cleanup or archival is required for v1
 - **Disaster Recovery**: Standard database backup and recovery procedures cover the audit log and system tables
