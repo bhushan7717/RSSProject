@@ -19,21 +19,21 @@
 
 **Purpose**: Project initialization and basic structure
 
-- [ ] T001 Create solution structure with 5 projects: PolicyMonitor.Domain, PolicyMonitor.Infrastructure, PolicyMonitor.Data, PolicyMonitor.Presentation, PolicyMonitor.Shared
-- [ ] T002 Initialize PolicyMonitor.Domain class library (.NET 8.0) in src/PolicyMonitor.Domain/
-- [ ] T003 [P] Initialize PolicyMonitor.Infrastructure class library (.NET 8.0) in src/PolicyMonitor.Infrastructure/
-- [ ] T004 [P] Initialize PolicyMonitor.Data class library (.NET 8.0) in src/PolicyMonitor.Data/
-- [ ] T005 [P] Initialize PolicyMonitor.Presentation Worker Service (.NET 8.0) in src/PolicyMonitor.Presentation/
-- [ ] T006 [P] Initialize PolicyMonitor.Shared class library (.NET 8.0) in src/PolicyMonitor.Shared/
-- [ ] T007 Add NuGet packages to PolicyMonitor.Infrastructure: QuestPDF, SkiaSharp
-- [ ] T008 [P] Add NuGet packages to PolicyMonitor.Infrastructure: MailKit, MimeKit
-- [ ] T009 [P] Add NuGet packages to PolicyMonitor.Infrastructure: Polly
-- [ ] T010 [P] Add NuGet packages to PolicyMonitor.Data: Microsoft.EntityFrameworkCore.SqlServer, Microsoft.EntityFrameworkCore.Tools
-- [ ] T011 [P] Add NuGet packages to PolicyMonitor.Shared: Serilog, Serilog.Sinks.Console, Serilog.Sinks.File
-- [ ] T012 Create appsettings.json configuration structure in src/PolicyMonitor.Presentation/appsettings.json
-- [ ] T013 [P] Create appsettings.Development.json in src/PolicyMonitor.Presentation/appsettings.Development.json
-- [ ] T014 [P] Create .editorconfig with C# coding standards in repository root
-- [ ] T015 Create database/ folder structure: triggers/, stored-procedures/, migrations/ in database/
+- [X] T001 Create solution structure with 5 projects: PolicyMonitor.Domain, PolicyMonitor.Infrastructure, PolicyMonitor.Data, PolicyMonitor.Presentation, PolicyMonitor.Shared
+- [X] T002 Initialize PolicyMonitor.Domain class library (.NET 8.0) in src/PolicyMonitor.Domain/
+- [X] T003 [P] Initialize PolicyMonitor.Infrastructure class library (.NET 8.0) in src/PolicyMonitor.Infrastructure/
+- [X] T004 [P] Initialize PolicyMonitor.Data class library (.NET 8.0) in src/PolicyMonitor.Data/
+- [X] T005 [P] Initialize PolicyMonitor.Presentation Worker Service (.NET 8.0) in src/PolicyMonitor.Presentation/
+- [X] T006 [P] Initialize PolicyMonitor.Shared class library (.NET 8.0) in src/PolicyMonitor.Shared/
+- [X] T007 Add NuGet packages to PolicyMonitor.Infrastructure: QuestPDF, SkiaSharp
+- [X] T008 [P] Add NuGet packages to PolicyMonitor.Infrastructure: MailKit, MimeKit
+- [X] T009 [P] Add NuGet packages to PolicyMonitor.Infrastructure: Polly
+- [X] T010 [P] Add NuGet packages to PolicyMonitor.Data: Microsoft.EntityFrameworkCore.SqlServer, Microsoft.EntityFrameworkCore.Tools
+- [X] T011 [P] Add NuGet packages to PolicyMonitor.Shared: Serilog, Serilog.Sinks.Console, Serilog.Sinks.File
+- [X] T012 Create appsettings.json configuration structure in src/PolicyMonitor.Presentation/appsettings.json
+- [X] T013 [P] Create appsettings.Development.json in src/PolicyMonitor.Presentation/appsettings.Development.json
+- [X] T014 [P] Create .editorconfig with C# coding standards in repository root
+- [X] T015 Create database/ folder structure: triggers/, stored-procedures/, migrations/ in database/
 
 ---
 
@@ -43,20 +43,20 @@
 
 **⚠️ MANDATORY**: SC-011 requires 95%+ unit test coverage across all modules
 
-- [ ] T016-TEST Initialize PolicyMonitor.Domain.Tests xUnit project (.NET 8.0) in tests/PolicyMonitor.Domain.Tests/
-- [ ] T017-TEST [P] Initialize PolicyMonitor.Infrastructure.Tests xUnit project (.NET 8.0) in tests/PolicyMonitor.Infrastructure.Tests/
-- [ ] T018-TEST [P] Initialize PolicyMonitor.Data.Tests xUnit project (.NET 8.0) in tests/PolicyMonitor.Data.Tests/
-- [ ] T019-TEST [P] Initialize PolicyMonitor.Integration.Tests xUnit project (.NET 8.0) in tests/PolicyMonitor.Integration.Tests/
-- [ ] T020-TEST [P] Initialize PolicyMonitor.TestHelpers class library (.NET 8.0) in tests/PolicyMonitor.TestHelpers/
-- [ ] T021-TEST Add NuGet packages to all test projects: xUnit, xUnit.runner.visualstudio, coverlet.collector
-- [ ] T022-TEST [P] Add NuGet packages to test projects: Moq (mocking framework)
-- [ ] T023-TEST [P] Add NuGet packages to test projects: FluentAssertions (assertion library)
-- [ ] T024-TEST [P] Add NuGet packages to Integration.Tests: Microsoft.EntityFrameworkCore.InMemory, Testcontainers
-- [ ] T025-TEST [P] Create test builders in TestHelpers: PolicyBuilder, StatusChangeEventBuilder in tests/PolicyMonitor.TestHelpers/Builders/
-- [ ] T026-TEST [P] Create mock factories in TestHelpers: MockPdfGenerator, MockEmailClient in tests/PolicyMonitor.TestHelpers/Mocks/
-- [ ] T027-TEST [P] Create test data fixtures for common scenarios in tests/PolicyMonitor.TestHelpers/Fixtures/
-- [ ] T028-TEST Configure code coverage reporting with coverlet in repository root
-- [ ] T029-TEST [P] Create GitHub Actions workflow or script for running tests and coverage in .github/workflows/test.yml
+- [X] T016-TEST Initialize PolicyMonitor.Domain.Tests xUnit project (.NET 8.0) in tests/PolicyMonitor.Domain.Tests/
+- [X] T017-TEST [P] Initialize PolicyMonitor.Infrastructure.Tests xUnit project (.NET 8.0) in tests/PolicyMonitor.Infrastructure.Tests/
+- [X] T018-TEST [P] Initialize PolicyMonitor.Data.Tests xUnit project (.NET 8.0) in tests/PolicyMonitor.Data.Tests/
+- [X] T019-TEST [P] Initialize PolicyMonitor.Integration.Tests xUnit project (.NET 8.0) in tests/PolicyMonitor.Integration.Tests/
+- [X] T020-TEST [P] Initialize PolicyMonitor.TestHelpers class library (.NET 8.0) in tests/PolicyMonitor.TestHelpers/
+- [X] T021-TEST Add NuGet packages to all test projects: xUnit, xUnit.runner.visualstudio, coverlet.collector
+- [X] T022-TEST [P] Add NuGet packages to test projects: Moq (mocking framework)
+- [X] T023-TEST [P] Add NuGet packages to test projects: FluentAssertions (assertion library)
+- [X] T024-TEST [P] Add NuGet packages to Integration.Tests: Microsoft.EntityFrameworkCore.InMemory, Testcontainers
+- [X] T025-TEST [P] Create test builders in TestHelpers: PolicyBuilder, StatusChangeEventBuilder in tests/PolicyMonitor.TestHelpers/Builders/
+- [X] T026-TEST [P] Create mock factories in TestHelpers: MockPdfGenerator, MockEmailClient in tests/PolicyMonitor.TestHelpers/Mocks/
+- [X] T027-TEST [P] Create test data fixtures for common scenarios in tests/PolicyMonitor.TestHelpers/Fixtures/
+- [X] T028-TEST Configure code coverage reporting with coverlet in repository root
+- [X] T029-TEST [P] Create GitHub Actions workflow or script for running tests and coverage in .github/workflows/test.yml
 
 **Checkpoint**: Test infrastructure ready - TDD workflow can begin
 
@@ -68,23 +68,23 @@
 
 **⚠️ CRITICAL**: No user story work can begin until this phase is complete
 
-- [ ] T030 Create base IRepository<TEntity, TKey> interface in src/PolicyMonitor.Data/Repositories/IRepository.cs
-- [ ] T031 Create base Repository<TEntity, TKey> implementation in src/PolicyMonitor.Data/Repositories/Repository.cs
-- [ ] T032 Create PolicyDbContext with connection string configuration in src/PolicyMonitor.Data/Context/PolicyDbContext.cs
-- [ ] T033 [P] Create Serilog configuration helper in src/PolicyMonitor.Shared/Logging/LoggingConfiguration.cs
-- [ ] T034 [P] Create configuration extensions for app settings in src/PolicyMonitor.Shared/Configuration/ConfigurationExtensions.cs
-- [ ] T035 Setup Polly retry policies for PDF generation in src/PolicyMonitor.Shared/Resilience/PdfRetryPolicy.cs
-- [ ] T036 [P] Setup Polly retry policies for email delivery in src/PolicyMonitor.Shared/Resilience/EmailRetryPolicy.cs
-- [ ] T037 [P] Setup Polly retry policies for file transfer in src/PolicyMonitor.Shared/Resilience/FileTransferRetryPolicy.cs
-- [ ] T038 Create base domain entity class with common properties in src/PolicyMonitor.Domain/Entities/BaseEntity.cs
-- [ ] T039 Configure dependency injection container structure in src/PolicyMonitor.Presentation/Program.cs
-- [ ] T040 Create custom exception types: PdfGenerationException, NotificationException, FileTransferException in src/PolicyMonitor.Domain/Exceptions/
+- [X] T030 Create base IRepository<TEntity, TKey> interface in src/PolicyMonitor.Data/Repositories/IRepository.cs
+- [X] T031 Create base Repository<TEntity, TKey> implementation in src/PolicyMonitor.Data/Repositories/Repository.cs
+- [X] T032 Create PolicyDbContext with connection string configuration in src/PolicyMonitor.Data/Context/PolicyDbContext.cs
+- [X] T033 [P] Create Serilog configuration helper in src/PolicyMonitor.Shared/Logging/LoggingConfiguration.cs
+- [X] T034 [P] Create configuration extensions for app settings in src/PolicyMonitor.Shared/Configuration/ConfigurationExtensions.cs
+- [X] T035 Setup Polly retry policies for PDF generation in src/PolicyMonitor.Shared/Resilience/PdfRetryPolicy.cs
+- [X] T036 [P] Setup Polly retry policies for email delivery in src/PolicyMonitor.Shared/Resilience/EmailRetryPolicy.cs
+- [X] T037 [P] Setup Polly retry policies for file transfer in src/PolicyMonitor.Shared/Resilience/FileTransferRetryPolicy.cs
+- [X] T038 Create base domain entity class with common properties in src/PolicyMonitor.Domain/Entities/BaseEntity.cs
+- [X] T039 Configure dependency injection container structure in src/PolicyMonitor.Presentation/Program.cs
+- [X] T040 Create custom exception types: PdfGenerationException, NotificationException, FileTransferException in src/PolicyMonitor.Domain/Exceptions/
 
 ### Foundational Tests (TDD - Write First)
 
-- [ ] T041-TEST [P] Unit test for Repository<TEntity, TKey> base implementation in tests/PolicyMonitor.Data.Tests/Repositories/RepositoryTests.cs
-- [ ] T042-TEST [P] Unit test for Polly retry policies (PDF, Email, FileTransfer) in tests/PolicyMonitor.Shared.Tests/Resilience/
-- [ ] T043-TEST [P] Unit test for custom exception types in tests/PolicyMonitor.Domain.Tests/Exceptions/ExceptionTests.cs
+- [X] T041-TEST [P] Unit test for Repository<TEntity, TKey> base implementation in tests/PolicyMonitor.Data.Tests/Repositories/RepositoryTests.cs
+- [X] T042-TEST [P] Unit test for Polly retry policies (PDF, Email, FileTransfer) in tests/PolicyMonitor.Shared.Tests/Resilience/
+- [X] T043-TEST [P] Unit test for custom exception types in tests/PolicyMonitor.Domain.Tests/Exceptions/ExceptionTests.cs
 
 **Checkpoint**: Foundation ready - user story implementation can now begin in parallel
 
