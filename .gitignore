@@ -1,0 +1,182 @@
+# .NET / C# Ignore Patterns
+# Created for Insurance Policy Status Monitor (.NET 8.0)
+
+## Build Results
+bin/
+obj/
+out/
+dist/
+build/
+
+## Visual Studio / Rider / VS Code
+.vs/
+.vscode/settings.json
+.vscode/launch.json
+.vscode/tasks.json
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.userprefs
+
+## NuGet
+packages/
+*.nupkg
+*.snupkg
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+## Test Results
+TestResults/
+*.trx
+*.coverage
+*.coveragexml
+coverage/
+*.cobertura.xml
+
+## Logs and Databases
+*.log
+*.log.*
+*.db
+*.sqlite
+*.mdf
+*.ldf
+
+## Environment and Secrets
+.env
+.env.*
+appsettings.local.json
+appsettings.*.local.json
+secrets.json
+*.key
+*.pfx
+*.p12
+
+## Temporary and Cache
+*.tmp
+*.temp
+*.cache
+*.swp
+*~
+.DS_Store
+Thumbs.db
+
+## Entity Framework Migrations (commented - we want to keep migrations in source control)
+# Migrations/
+
+## User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+## Rider
+.idea/
+*.sln.iml
+
+## MonoDevelop / Xamarin Studio
+*.pidb
+*.pdb
+*.mdb
+
+## Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+## Folder config file
+Desktop.ini
+
+## Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+## Mac files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+## Backup files
+*.bak
+*.backup
+*~
+
+## Published files (deployment artifacts - may want to keep these)
+publish/
+*.publish.xml
+
+## SQL Server files (local development databases)
+*.mdf
+*.ldf
+*.ndf
+
+## BenchmarkDotNet
+BenchmarkDotNet.Artifacts/
+
+## StyleCop
+StyleCopReport.xml
+
+## NCrunch
+_NCrunch_*
+.*crunch*.local.xml
+nCrunchTemp_*
+
+## ReSharper
+_ReSharper*/
+*.ReSharper
+*.DotSettings.user
+
+## JetBrains Rider
+.idea/
+*.sln.iml
+
+## Visual Studio profiler
+*.psess
+*.vsp
+*.vspx
+*.sap
+
+## Visual Studio Trace Files
+*.e2e
+
+## TFS 2012 Local Workspace
+$tf/
+
+## Guidance Automation Toolkit
+*.gpState
+
+## Azure Functions local settings
+local.settings.json
+
+## Python (if any utility scripts)
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+venv/
+.venv/
+
+## Node.js (if any frontend tooling)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+## Rider
+.idea/
+.idea_modules/
+
+## Generated PDFs (temporary staging - production PDFs should be in configured output location)
+**/temp-pdfs/
+**/staging-pdfs/
+
+## Project-specific exclusions
+# Keep database scripts in source control
+!database/**/*.sql
+
+# Keep .specify configuration
+!.specify/
+
+# Keep GitHub workflows
+!.github/

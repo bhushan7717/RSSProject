@@ -1,0 +1,86 @@
+name: Build and Test
+
+on:
+  push:
+    branches: [ main, develop, 001-policy-status-monitor ]
+  pull_request:
+    branches: [ main, develop ]
+  workflow_dispatch:
+
+jobs:
+  test:
+    name: Build, Test, and Coverage
+    runs-on: windows-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        fetch-depth: 0  # Needed for SonarCloud
+    
+    - name: Setup .NET 8.0
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '8.0.x'
+    
+    - name: Restore dependencies
+      run: dotnet restore
+    
+    - name: Build solution
+      run: dotnet build --no-restore --configuration Release
+    
+    - name: Run tests with coverage
+      run: |
+        dotnet test --no-build --configuration Release `
+          --collect:"XPlat Code Coverage" `
+          --settings coverage.runsettings `
+          --logger "trx;LogFileName=test-results.trx" `
+          --results-directory ./TestResults
+    
+    - name: Generate coverage report
+      run: |
+        dotnet tool install -g dotnet-reportgenerator-globaltool
+        reportgenerator `
+          -reports:./TestResults/**/coverage.cobertura.xml `
+          -targetdir:./TestResults/CoverageReport `
+          -reporttypes:"Html;JsonSummary;MarkdownSummaryGithub;Badges"
+    
+    - name: Check coverage threshold (95%)
+      run: |
+        $json = Get-Content ./TestResults/CoverageReport/Summary.json | ConvertFrom-Json
+        $lineCoverage = $json.summary.linecoverage
+        Write-Host "Line Coverage: $lineCoverage%"
+        if ($lineCoverage -lt 95) {
+          Write-Error "Coverage $lineCoverage% is below 95% threshold (SC-011 requirement)"
+          exit 1
+        }
+    
+    - name: Upload coverage reports to Codecov
+      uses: codecov/codecov-action@v4
+      with:
+        directory: ./TestResults
+        fail_ci_if_error: false
+        files: ./TestResults/**/coverage.cobertura.xml
+        flags: unittests
+        name: codecov-umbrella
+    
+    - name: Publish test results
+      uses: EnricoMi/publish-unit-test-result-action/windows@v2
+      if: always()
+      with:
+        files: ./TestResults/**/*.trx
+        check_name: Test Results
+    
+    - name: Upload coverage report artifact
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: coverage-report
+        path: ./TestResults/CoverageReport/
+        retention-days: 30
+    
+    - name: Comment PR with coverage
+      if: github.event_name == 'pull_request'
+      uses: marocchino/sticky-pull-request-comment@v2
+      with:
+        recreate: true
+        path: ./TestResults/CoverageReport/SummaryGithub.md

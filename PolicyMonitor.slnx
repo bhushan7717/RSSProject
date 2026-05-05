@@ -1,0 +1,16 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/PolicyMonitor.Data/PolicyMonitor.Data.csproj" />
+    <Project Path="src/PolicyMonitor.Domain/PolicyMonitor.Domain.csproj" />
+    <Project Path="src/PolicyMonitor.Infrastructure/PolicyMonitor.Infrastructure.csproj" />
+    <Project Path="src/PolicyMonitor.Presentation/PolicyMonitor.Presentation.csproj" />
+    <Project Path="src/PolicyMonitor.Shared/PolicyMonitor.Shared.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/PolicyMonitor.Data.Tests/PolicyMonitor.Data.Tests.csproj" />
+    <Project Path="tests/PolicyMonitor.Domain.Tests/PolicyMonitor.Domain.Tests.csproj" />
+    <Project Path="tests/PolicyMonitor.Infrastructure.Tests/PolicyMonitor.Infrastructure.Tests.csproj" />
+    <Project Path="tests/PolicyMonitor.Integration.Tests/PolicyMonitor.Integration.Tests.csproj" />
+    <Project Path="tests/PolicyMonitor.TestHelpers/PolicyMonitor.TestHelpers.csproj" />
+  </Folder>
+</Solution>
